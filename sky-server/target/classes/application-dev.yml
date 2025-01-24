@@ -1,0 +1,15 @@
+sky:
+  alioss:
+    endpoint: https://oss-cn-shanghai.aliyuncs.com
+    access-key-id: LTAI5tNjn7hMvxfMsJKAikpB
+    bucket-name: big-event-songzhonghua
+    access-key-secret: eDy8LeltgKTi69u8RqIwbN3LgL1K7n
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sky_take_out
+    username: root
+    password: 12345678

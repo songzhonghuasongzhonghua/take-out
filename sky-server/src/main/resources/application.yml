@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: ${sky.datasource.driver-class-name}
+    url: ${sky.datasource.url}
+    username: ${sky.datasource.username}
+    password: ${sky.datasource.password}
+
+  profiles:
+    active: dev
+  data:
+    redis:
+      host: ${sky.redis.host}
+      port: ${sky.redis.port}
+      database: ${sky.redis.database}
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.song.entity
+
+
+sky:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: song
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+  alioss:
+    endpoint: ${sky.alioss.endpoint}
+    access-key-id: ${sky.alioss.access-key-id}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    bucket-name: ${sky.alioss.bucket-name}
+
+
